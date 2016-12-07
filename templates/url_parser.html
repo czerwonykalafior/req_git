@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+
+            <div class="container-fluid text-center">
+                <h1>URL PARSER</h1>
+
+                <div class="form-group">
+                    <label>Input the url for parse or compare:</label>
+                    <input type="text" class="form-control" id="source_url" value="https://www.google.pl/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8&client=ubuntu#q=mirror+mirror+on+the+wall">
+                </div>
+                <div class="form-group">
+                    <label>Put the second one if you want to compare/diff:</label>
+                    <input type="text" class="form-control" id="mine_url" value="https://www.google.pl/webhp?sourceids=chrome-instant&ie=UTF-8&ion=1&espv=2&client=ubuntu#q=mirror+mirror+on+the+wall">
+                </div>
+                <button class="btn" id="parse">Parse</button>
+                <button class="btn" id="compare">Compare</button>
+                <button class="btn" id="match_params">Match parameters</button>
+
+            </div>
+
+            <div class="row results not_yet" >
+                <div>
+                    <p class="col-md-12 text-center" id="checked">   .    </p>
+                </div>
+            </div>
+
+            <div class="row results not_yet" >
+                <div class="col-xs-6 text-center">
+                    <h3>Base URL:</h3>
+                    <p id="base_url"></p>
+                </div>
+                <div class="col-xs-6 ">
+                    <h3 >Parameters:</h3>
+                    <p id="info">Choose what should be replaced by variables</p>
+                    <form class="checkbox" id="parameters"></form>
+                    <input class="btn-lg" id='replace' type="submit" value="Go">
+
+                </div>
+            </div>
+        </div>
+
+    <span id="display"></span>
+
+
+    </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+body { padding-top: 70px; }
+
+.container .jumbotron {
+padding-top: 0px;
+}
+
+.not_yet{
+    display: none}
